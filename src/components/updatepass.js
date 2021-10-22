@@ -29,7 +29,9 @@ export const Updatepass = () => {
                   </div>
                   <form onSubmit={ async(e) => {
                       e.preventDefault();
-
+                      setEmail("");
+                      setPassword("");
+                      setConfirmPassword("");
                       let response = await fetch(
                         "https://bucketlistserver.herokuapp.com/update-password",
                         {

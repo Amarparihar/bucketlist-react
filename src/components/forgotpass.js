@@ -25,6 +25,7 @@ export const Forgotpass = () => {
                   </div>
                   <form onSubmit={ async(e) => {
                       e.preventDefault();
+                      setEmail("");
 
                       let response = await fetch(
                         "https://bucketlistserver.herokuapp.com/forgot-password",
