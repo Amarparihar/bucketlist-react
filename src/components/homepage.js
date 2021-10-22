@@ -34,7 +34,7 @@ export const Homepage = () => {
                     setPassword("");
 
                     let response = await fetch(
-                      "http://localhost:7070/login",
+                      "https://bucketlistserver.herokuapp.com/login",
                       {
                         method: "POST",
                         body: JSON.stringify({

@@ -35,7 +35,7 @@ export const Register = () => {
 
 
                     let response = await fetch(
-                      "http://localhost:7070/register",
+                      "https://bucketlistserver.herokuapp.com/register",
                       {
                         method: "POST",
                         body: JSON.stringify({

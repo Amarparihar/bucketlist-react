@@ -27,7 +27,7 @@ export const Forgotpass = () => {
                       e.preventDefault();
 
                       let response = await fetch(
-                        "http://localhost:7070/forgot-password",
+                        "https://bucketlistserver.herokuapp.com/forgot-password",
                         {
                           method: "POST",
                           body: JSON.stringify({

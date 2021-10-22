@@ -19,7 +19,7 @@ export const Bucketlist = (props) => {
 
     useEffect(() => {
         let fetchData = async () => {
-          let listData = await fetch(`http://localhost:7070/bucketlist/bucketlist/${props.match.params.id}`);
+          let listData = await fetch(`https://bucketlistserver.herokuapp.com/bucketlist/bucketlist/${props.match.params.id}`);
           let Data = await listData.json();
           setListData([...Data]);
         };
@@ -42,7 +42,7 @@ export const Bucketlist = (props) => {
                             setList("");
 
                             let response = await fetch(
-                                `http://localhost:7070/bucketlist/create-bucketlist/${props.match.params.id}`,
+                                `https://bucketlistserver.herokuapp.com/bucketlist/create-bucketlist/${props.match.params.id}`,
                                 {
                                   method: "POST",
                                   body: JSON.stringify({
@@ -84,7 +84,7 @@ export const Bucketlist = (props) => {
                                         <ul>
                                              <li key={keyId.toString()}>{list.bucketList}
                                             <span><Delete sx={{color:red[900] , ml:2}} onClick={async ()=>{
-                                                         await fetch(`http://localhost:7070/bucketlist/delete/${list.email}`,{
+                                                         await fetch(`https://bucketlistserver.herokuapp.com/bucketlist/delete/${list.email}`,{
                                                              method:"DELETE"
                                                 
                                                          });

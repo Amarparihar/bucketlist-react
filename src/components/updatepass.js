@@ -31,7 +31,7 @@ export const Updatepass = () => {
                       e.preventDefault();
 
                       let response = await fetch(
-                        "http://localhost:7070/update-password",
+                        "https://bucketlistserver.herokuapp.com/update-password",
                         {
                           method: "PUT",
                           body: JSON.stringify({
